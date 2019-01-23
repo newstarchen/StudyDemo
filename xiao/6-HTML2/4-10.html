@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="Css/css1.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" async="true">
+	function click1() {
+		var num = document.getElementById("te").value;
+		var div = document.getElementById("list");
+		div.setAttribute("start",num);	
+	}
+</script>
+<title>列表使用</title>
+</head>
+
+<body>
+ <h3>各类图书销售排名</h3>
+ <ol id="list">
+ 	<li>编程词典</li>
+	<li>php 开发宝典</li>
+    <li>java从入门到实践</li>
+  </ol>
+  <h5>设置开始值</h5>
+  <input type="text" id="te" class="tt" style="width:60px"/>
+  <input type="button" value="确定" class="bb" onclick="click1();">
+</body>
+</html>

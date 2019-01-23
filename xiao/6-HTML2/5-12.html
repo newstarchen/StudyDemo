@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+
+<body onload="out()">
+<a style="width:100px" href="http://www.mingrisoft.com" onMouseOut="out()"
+	onMouseOver="Over('吉林省明日科技有限公司')"> 
+	<p>http://www.mingrisoft.com</p>    
+</a>
+<div id="Tdiv"></div>
+<script language="javascript">
+	function over(hint) {
+		document.all.Tdiv.insertHTML = hint;
+		document.all.Tdiv.style.position = "absolute";
+		document.all.Tdiv.backgroundColor = "#FFFFCC";
+		document.all.Tdiv.style.width = "140px"
+		document.all.Tdiv.style.fontSize="9pt";
+		document.all.Tdiv.style.posLeft = windows.event.x+document.body.clientLeft+4;
+		document.all.Tdiv.style.posTop = windows.event.y+document.body.
+clientTop+2;
+		document.all.Tdiv.style.visibility = "visible";
+	}
+</script>
+
+<script language="javascript">
+function out(){
+	document.all.Tdiv.style.visibility = "hidden";
+}
+</script>
+
+</body>
+</html>
