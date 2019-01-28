@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd
+">
+<html xmlns="http://www.w3.org/1999/xhtml
+">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>DIV+CSS实现下拉列表菜单</title>
+<style type="text/css">
+<!--
+ul {
+ margin: 0px;
+ padding: 0px;
+ list-style-type: none;
+}
+li{
+   float:left;
+   width:160px;
+   margin-left:1px;
+   }
+ul li a{
+   display:block;
+   font-size:12px;
+   border:#CCCCCC 1px solid;
+   padding:3px;
+   text-decoration:none;
+   color:#777777;
+   margin-top:1px;
+   text-align:center;
+   }
+ul li a:hover{
+   background-color:#0099CC;
+   color:#FFFFFF;
+   }
+li ul{
+   display:none;
+   top:20px;
+   margin-top:1px;
+   }
+li:hover ul,li.over ul{
+   display:block;
+
+   }
+  
+-->
+</style>
+</head>
+<script type="text/javascript"><!--//--><![cdata]//><!--
+startlist = function() {
+     if （document.all&&document.getelementbyid) {
+     navRoot = document.getelementbyid("nav");
+  for (i=0;i<navRoot.childNodes.length; i++) {
+      node = navRoot.childNodes[i];
+   if (node.nodeName=="li") {
+       node.onmouseover=function() {
+        this.className+=" over";
+    }
+    node.onmouseout=function() {
+         this.className=this.className.replace(" over","");
+       }
+   }
+  }
+ }
+}
+window.onload=startlist;
+//--><!]]></script>
+</script>
+<body>
+<ul >
+   <li><a href="">文章</a>
+       <ul>
+       <li><a href="">CSS 教程</a></li>
+    <li><a href="">DOM 教程</a></li>
+    <li><a href="">XML 教程</a></li>
+    <li><a href="">Flash 教程</a></li>
+    </ul>
+ </li>
+   <li><a href="">参考</a>
+       <ul>
+       <li><a href="">XHTML</a></li>
+    <li><a href="">XML</a></li>
+    <li><a href="">CSS</a></li>
+    </ul>
+ </li>
+ <li><a href="">Blog</a>
+       <ul>
+       <li><a href="">全部</a></li>
+    <li><a href="">网页技术</a></li>
+    <li><a href="">UI 技术</a></li>
+    <li><a href="">Flash 技术</a></li>
+    </ul>
+ </li>
+ <li><a href="">摇滚</a>
+       <ul>
+       <li><a href="">纯音乐</a></li>
+    <li><a href="">古典金曲</a></li>
+    <li><a href="">UI 技术</a></li>
+    <li><a href="">Flash 技术</a></li>
+    </ul>
+ </li>    
+</ul>
+</body>
+</html>
+--------------------- 
+作者：技术人的突破 
+来源：CSDN 
+原文：https://blog.csdn.net/lifuxiangcaohui/article/details/6151897 
+版权声明：本文为博主原创文章，转载请附上博文链接！

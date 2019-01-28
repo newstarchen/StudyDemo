@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>display可设置元素的浮动特性</title>
+<script language="javascript">
+	function toggleDisplay(me) {
+		if (me.style.display=="block") {
+			me.style.display="inline";
+			alert("文本现在是：‘inline’");
+		} else if (me.style.display=="inline") {
+			me.style.display="none";
+			alert("文本现在是：‘none’");
+			window.setTimeout("blueText.style.display='block';",3000,"JavaScript");
+		} else {
+			me.style.display="block";
+			alert("文本现在是：‘block’");
+		}
+	}
+	
+</script>
+</head>
+
+<body>
+<div> 在 
+<span id="blueText" onclick="toggleDisplay(this)" style="color:blue; position:relative; cursor:hand;">蓝色
+</span>
+文字上点击查看效果。
+</div>
+</body>
+</html>

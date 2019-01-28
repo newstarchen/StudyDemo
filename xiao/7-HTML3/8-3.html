@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>display与visibility的比较</title>
+<script language="javascript">
+	function toggleVisibility(me) {
+		if (me.style.visibility=="hidden") {
+			me.style.visibility="visible";
+		} else {
+			me.style.visibility="hidden";
+		}
+	}
+</script>
+</head>
+
+<body>
+    <div onclick="toggleVisibility(this)" style="position:relative">
+    	第一行文本将会触发“hidden”和“visible”属性，注意第二行的变化。
+    </div>
+    <div>
+    	因为visibility会保留元素的位置，所以第二行不会移动。
+    </div>
+	
+</body>
+</html>
